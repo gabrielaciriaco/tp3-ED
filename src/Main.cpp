@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Comando.h"
+#include "Gerenciador.h"
 
 using namespace std; 
 
@@ -52,7 +53,8 @@ Comando *lerArquivo(char *nomeArquivo, int quantidadeDeLinhas) {
 int main(int argc, char *argv[]) {
   char *nomeArquivo = argv[1];
   int quantidadeDeComandos = contaQuantidadeDeComandos(nomeArquivo);
-  printf("%d", quantidadeDeComandos);
   Comando *comandos = lerArquivo(nomeArquivo, quantidadeDeComandos);
+  Gerenciador gerenciador;
+  gerenciador.gerenciaComandos(comandos,quantidadeDeComandos);
   return 0;
 }
