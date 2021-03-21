@@ -33,3 +33,19 @@ No* No::getDireito(){
 void No::setDireito(No *direito){
   this->direito = direito;
 }
+
+string No::getCodigoCaminho(char letra) {
+  string codigoCaminho = "";
+  No* aux;
+  if (letra < getSimbolo()) {
+    codigoCaminho += (((rand() % 5) * 2) + 1) + '0';
+     aux = getEsquerdo();
+     return codigoCaminho + aux->getCodigoCaminho(letra);
+  } else if(letra > getSimbolo()) {
+    codigoCaminho += (((rand() % 5) * 2)) + '0';
+    aux = getDireito();
+    return codigoCaminho + aux->getCodigoCaminho(letra);
+  }else{
+    return codigoCaminho;
+  }
+}

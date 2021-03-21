@@ -1,6 +1,7 @@
 #ifndef I_Gerenciador_H
 #define I_Gerenciador_H
-#include <string>
+#include<iostream>
+#include <string.h>
 #include "Arvore.h"
 #include "Comando.h"
 
@@ -17,6 +18,8 @@ class Gerenciador{
     void gerenciaComandos (Comando *comandos, int quantidadeDeComandos);
     void interpretaComando(Comando comando);
     void montaArvore(string comando);
+    void decodificar(string comando);
+    void codificar(string comando);
 };
 
 #endif

@@ -32,7 +32,8 @@
           "name": "g++ - Debug tests",
           "type": "cppdbg",
           "request": "launch",
-          "args": [
+ 
+         "args": [
               "<",
               "${workspaceFolder}/tests/3.in"
           ],

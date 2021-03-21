@@ -18,6 +18,7 @@ class No{
     void setEsquerdo(No *esquerdo);
     No* getDireito();
     void setDireito(No *direito);
+    string getCodigoCaminho(char letra);
     
     friend class Arvore;
 };
